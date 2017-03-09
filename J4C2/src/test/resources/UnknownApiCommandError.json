@@ -1,0 +1,7 @@
+{
+   "ok" : "0",
+   "error" : {
+      "title" : "Unknown API command",
+      "message" : "Please refer to Collective2 API docs or contact Help Desk for more information"
+   }
+}

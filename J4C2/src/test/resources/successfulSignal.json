@@ -1,0 +1,32 @@
+{
+   "ok" : "1",
+   "signal" : {
+      "market" : "1",
+      "signalid" : "110132874",
+      "stoploss" : "0",
+      "comments" : null,
+      "day" : "1",
+      "orderType" : "MARKET",
+      "systemid" : "110073259",
+      "parkUntilYYYYMMDDHHMM" : null,
+      "symbol" : "QQQ",
+      "conditionalupon" : null,
+      "duration" : "DAY",
+      "description" : "POWERSHARES QQQ",
+      "targetocagroupid" : null,
+      "expiresat" : "1489093500",
+      "pointvalue" : 1,
+      "parkUntilSecs" : null,
+      "typeofsymbol" : "stock",
+      "currency" : "USD",
+      "limit" : "0",
+      "quant" : "100",
+      "gtc" : "0",
+      "stop" : "0",
+      "profittarget" : "0",
+      "action" : "BTO",
+      "ocaid" : null
+   },
+   "signalid" : "110132874",
+   "elapsed_time" : "1.4671"
+}

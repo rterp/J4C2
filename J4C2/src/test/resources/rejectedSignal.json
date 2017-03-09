@@ -1,0 +1,41 @@
+{
+   "ok" : "0",
+   "signal" : {
+      "symbol" : null
+   },
+   "rejectedSignal" : {
+      "market" : 1,
+      "_brokercode" : null,
+      "_forceFillPrice" : null,
+      "typeofsymbol" : null,
+      "stoploss" : "0",
+      "_personid" : null,
+      "__forceTradePrice" : null,
+      "_brokerid" : null,
+      "day" : 1,
+      "__forceTradeTimeSecs" : null,
+      "gtc" : 0,
+      "quant" : 100,
+      "limit" : "0",
+      "orderType" : "MARKET",
+      "systemid" : "110073259",
+      "pSymbol" : "QQQ",
+      "symbol" : "QQQ",
+      "stop" : "0",
+      "_accountnum" : null,
+      "_replace_into_oca_group" : null,
+      "duration" : "DAY",
+      "_sourceVersion" : null,
+      "_source" : null,
+      "__allowExpiredOrUnknownSymbol" : null,
+      "profittarget" : "0",
+      "action" : "BTO",
+      "__forceImmediateFill" : null,
+      "tradeleader" : null
+   },
+   "error" : {
+      "title" : "Unknown typeofsymbol",
+      "message" : "typeofsymbol required and must be one of these: stock option future forex"
+   },
+   "elapsed_time" : "0.0007"
+}
