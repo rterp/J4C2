@@ -20,6 +20,7 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 package com.sumzerotrading.j4c2.signal;
 
 import com.sumzerotrading.j4c2.ApiCommand;
+import java.util.Objects;
 
 /**
  *
@@ -52,12 +53,44 @@ public class SubmitSignalRequest extends ApiCommand{
         this.signal = signal;
     }
     
-    
-    
-    
-    
     public String getCommandName() {
-        return "submitSignala";
+        return "submitSignal";
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 47 * hash + Objects.hashCode(this.systemid);
+        hash = 47 * hash + Objects.hashCode(this.signal);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final SubmitSignalRequest other = (SubmitSignalRequest) obj;
+        if (!Objects.equals(this.systemid, other.systemid)) {
+            return false;
+        }
+        if (!Objects.equals(this.signal, other.signal)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "SubmitSignalRequest{" + "systemid=" + systemid + ", signal=" + signal + '}';
+    }
+    
+    
     
 }

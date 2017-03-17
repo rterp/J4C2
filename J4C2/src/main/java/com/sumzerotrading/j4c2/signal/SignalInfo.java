@@ -164,6 +164,75 @@ public class SignalInfo {
     }
 
     @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 41 * hash + Objects.hashCode(this.action);
+        hash = 41 * hash + Objects.hashCode(this.symbolType);
+        hash = 41 * hash + Objects.hashCode(this.duration);
+        hash = 41 * hash + (this.isMarketOrder ? 1 : 0);
+        hash = 41 * hash + Objects.hashCode(this.orderType);
+        hash = 41 * hash + this.quantity;
+        hash = 41 * hash + Objects.hashCode(this.ticker);
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.stopPrice) ^ (Double.doubleToLongBits(this.stopPrice) >>> 32));
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.limitPrice) ^ (Double.doubleToLongBits(this.limitPrice) >>> 32));
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.attachedProfitTarget) ^ (Double.doubleToLongBits(this.attachedProfitTarget) >>> 32));
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.attachedStopLoss) ^ (Double.doubleToLongBits(this.attachedStopLoss) >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final SignalInfo other = (SignalInfo) obj;
+        if (this.isMarketOrder != other.isMarketOrder) {
+            return false;
+        }
+        if (this.quantity != other.quantity) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.stopPrice) != Double.doubleToLongBits(other.stopPrice)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.limitPrice) != Double.doubleToLongBits(other.limitPrice)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.attachedProfitTarget) != Double.doubleToLongBits(other.attachedProfitTarget)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.attachedStopLoss) != Double.doubleToLongBits(other.attachedStopLoss)) {
+            return false;
+        }
+        if (!Objects.equals(this.ticker, other.ticker)) {
+            return false;
+        }
+        if (this.action != other.action) {
+            return false;
+        }
+        if (this.symbolType != other.symbolType) {
+            return false;
+        }
+        if (this.duration != other.duration) {
+            return false;
+        }
+        if (this.orderType != other.orderType) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+    
+    
+
+    @Override
     public String toString() {
         return "SignalInfo{" + "action=" + action + ", symbolType=" + symbolType + ", duration=" + duration + ", isMarketOrder=" + isMarketOrder + ", orderType=" + orderType + ", quantity=" + quantity + ", ticker=" + ticker + ", stopPrice=" + stopPrice + ", limitPrice=" + limitPrice + ", attachedProfitTarget=" + attachedProfitTarget + ", attachedStopLoss=" + attachedStopLoss + '}';
     }
