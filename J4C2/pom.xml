@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sumzerotrading</groupId>
     <artifactId>J4C2</artifactId>
-    <version>1.0.0-3-SNAPSHOT</version>
+    <version>1.0.0-4-SNAPSHOT</version>
     <packaging>jar</packaging>
     <build>
         <plugins>
